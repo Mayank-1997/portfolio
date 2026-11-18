@@ -4,28 +4,32 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://mayank-ai-portfolio.onrender.com"),
   title: {
-    default: "Mayank Aggarwal | Backend & Agentic AI Engineer",
+    default: "Mayank Aggarwal | Senior Full-Stack AI Engineer",
     template: "%s | Mayank Aggarwal"
   },
   description:
-    "Mayank Aggarwal is a Backend & Agentic AI Engineer building scalable backend platforms, RAG pipelines, multi-agent systems, FastAPI microservices, and production-grade GenAI applications.",
+    "Mayank Aggarwal is a Senior Full-Stack AI Engineer building end-to-end AI platforms: Next.js frontends, FastAPI backends, LangGraph orchestration, cloud infrastructure, and production AI systems including AI Video Studio.",
   keywords: [
     "Mayank Aggarwal",
+    "Senior Full-Stack AI Engineer",
+    "Frontend Engineer",
     "Backend Engineer",
-    "Agentic AI Engineer",
-    "Generative AI Engineer",
+    "AI Engineer",
+    "Next.js",
+    "FastAPI",
     "LangGraph",
     "LangChain",
-    "FastAPI",
+    "AI Video Studio",
     "RAG pipelines",
-    "Multi-Agent Systems"
+    "Multi-Agent Systems",
+    "Production AI"
   ],
   authors: [{ name: "Mayank Aggarwal" }],
   creator: "Mayank Aggarwal",
   openGraph: {
-    title: "Mayank Aggarwal | Backend & Agentic AI Engineer",
+    title: "Mayank Aggarwal | Senior Full-Stack AI Engineer",
     description:
-      "Production-grade GenAI, RAG pipelines, autonomous AI systems, FastAPI microservices, and scalable backend architecture.",
+      "End-to-end AI platforms: Next.js frontends, FastAPI backends, LangGraph orchestration, cloud infrastructure, and production AI systems including AI Video Studio with 150K+ video views.",
     url: "https://mayank-ai-portfolio.onrender.com",
     siteName: "Mayank Aggarwal Portfolio",
     images: [
@@ -41,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mayank Aggarwal | Backend & Agentic AI Engineer",
+    title: "Mayank Aggarwal | Senior Full-Stack AI Engineer",
     description:
-      "Scalable backend platforms, Agentic AI workflows, RAG pipelines, and production GenAI applications.",
+      "Full-stack AI platforms: Next.js, FastAPI, LangGraph, cloud infrastructure, and production AI systems including AI Video Studio.",
     images: ["/assets/mayank-ai-avatar.png"]
   },
   robots: {

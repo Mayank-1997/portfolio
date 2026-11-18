@@ -6,16 +6,25 @@ import { motion } from "framer-motion";
 import {
   ArrowUpRight,
   Award,
+  BarChart3,
+  BrainCircuit,
   BriefcaseBusiness,
   CheckCircle2,
+  Clapperboard,
+  Cloud,
+  Code2,
+  Cpu,
   Download,
   Github,
+  Globe,
   Linkedin,
   Mail,
   Menu,
   Phone,
   Rocket,
+  ServerCog,
   Terminal,
+  TrendingUp,
   X
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -31,6 +40,7 @@ import {
   architectureFlows,
   certifications,
   experiences,
+  featuredProject,
   links,
   navItems,
   projects,
@@ -115,17 +125,17 @@ function Hero() {
         <Reveal>
           <div>
             <Badge className="border-accent/35 bg-accent/10 text-[#ffbf72]">
-              <Terminal className="mr-2 h-3.5 w-3.5" /> Backend & Agentic AI Engineer
+              <Terminal className="mr-2 h-3.5 w-3.5" /> Senior Full-Stack AI Engineer
             </Badge>
             <h1 className="mt-7 max-w-5xl font-display text-5xl font-semibold leading-[1.02] tracking-[-0.03em] text-white md:text-7xl lg:text-8xl">
-              Building Scalable Backend Platforms &{" "}
+              Building Full-Stack AI Systems &{" "}
               <span className="bg-gradient-to-r from-[#ff6b00] via-[#ffb224] to-[#fff0b0] bg-[length:200%_auto] bg-clip-text text-transparent animate-shimmer">
-                Agentic AI Systems
+                Production Platforms
               </span>
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-white/68 md:text-xl">
-              Generative AI Engineer specializing in Agentic AI workflows, RAG pipelines, autonomous AI systems,
-              FastAPI microservices, and production-grade backend engineering.
+              Senior Full-Stack AI Engineer specializing in end-to-end AI platforms: Next.js frontends, FastAPI backends,
+              LangGraph orchestration, cloud infrastructure, and production-grade AI systems that ship real products.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -177,8 +187,8 @@ function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 <div className="absolute inset-x-4 bottom-4 rounded-[8px] border border-primary/20 bg-black/50 p-4 backdrop-blur-xl">
-                  <p className="font-display text-sm font-semibold text-primary">AI Architect Mode</p>
-                  <p className="mt-1 text-xs text-white/65">LangGraph orchestration • RAG • FastAPI platforms</p>
+                  <p className="font-display text-sm font-semibold text-primary">Full-Stack AI Mode</p>
+                  <p className="mt-1 text-xs text-white/65">Next.js • FastAPI • LangGraph • Production Infrastructure</p>
                 </div>
               </div>
             </Card>
@@ -195,31 +205,31 @@ function About() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="About"
-          title="Engineering reliable backends for the age of autonomous software."
-          body="Mayank blends backend engineering discipline with modern AI orchestration to build systems that move from prototype energy to production trust."
+          title="Engineering full-stack AI platforms from frontend to production infrastructure."
+          body="Mayank builds end-to-end AI systems: Next.js frontends, FastAPI backends, LangGraph orchestration, cloud deployment, and operational discipline."
         />
         <div className="grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
           <Reveal>
             <Card className="h-full p-7">
               <BriefcaseBusiness className="h-9 w-9 text-primary" />
-              <h3 className="mt-6 font-display text-2xl font-semibold text-white">Backend depth. AI-native execution.</h3>
+              <h3 className="mt-6 font-display text-2xl font-semibold text-white">Full-stack AI engineering. Production systems.</h3>
               <p className="mt-5 leading-8 text-white/65">
-                Mayank builds scalable architectures across FastAPI, Python, Docker, Kubernetes, AWS, distributed
-                systems, semantic retrieval, and enterprise AI automation. His work emphasizes clean service boundaries,
-                observability-minded delivery, secure APIs, and AI workflows that can be reasoned about under real
-                production constraints.
+                Mayank builds end-to-end AI platforms: Next.js frontends with TypeScript, FastAPI backends with Python,
+                LangGraph multi-agent workflows, Docker/Fly.io infrastructure, and operational observability. His work
+                emphasizes clean service boundaries, typed contracts, secure APIs, and AI workflows that run reliably in
+                production with real users.
               </p>
             </Card>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="grid gap-5 sm:grid-cols-2">
-              {["LangGraph", "LangChain", "OpenAI APIs", "Groq APIs", "Gemini APIs", "RAG systems", "Prompt Engineering", "Multi-Agent Systems"].map((item) => (
+              {["Next.js & React", "FastAPI & Python", "LangGraph Orchestration", "Docker & Fly.io", "Celery & Redis", "PostgreSQL & Alembic", "Langfuse Observability", "Production Operations"].map((item) => (
                 <Card key={item} className="group relative overflow-hidden p-5">
                   <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary/10 blur-2xl transition group-hover:bg-primary/20" />
                   <CheckCircle2 className="h-5 w-5 text-primary" />
                   <p className="mt-4 font-display text-lg font-semibold text-white">{item}</p>
                   <p className="mt-2 text-sm leading-6 text-white/55">
-                    Production-focused capability for enterprise AI systems, automation, and scalable backend workflows.
+                    Production-focused capability for full-stack AI platforms, frontend-backend integration, and operational delivery.
                   </p>
                 </Card>
               ))}
@@ -380,6 +390,157 @@ function Projects() {
   );
 }
 
+function FeaturedProject() {
+  return (
+    <section id="featured-project" className="relative px-5 py-24 md:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Featured Case Study"
+          title="AI Video Studio: End-to-End AI Platform"
+          body="A production AI platform that converts a single prompt into a fully produced short-form video. 150K+ views generated on social platforms."
+        />
+        <Reveal>
+          <Card className="overflow-hidden p-0">
+            <div className="border-b border-white/10 bg-gradient-to-r from-primary/10 to-accent/10 p-8 md:p-12">
+              <div className="flex flex-wrap items-center gap-4">
+                <div className="grid h-16 w-16 place-items-center rounded-[8px] border border-primary/25 bg-primary/10 text-primary">
+                  <Clapperboard className="h-8 w-8" />
+                </div>
+                <div>
+                  <h2 className="font-display text-3xl font-semibold text-white md:text-4xl">{featuredProject.title}</h2>
+                  <p className="mt-1 text-lg text-primary/80">{featuredProject.subtitle}</p>
+                </div>
+              </div>
+              <p className="mt-6 text-lg leading-8 text-white/70">{featuredProject.description}</p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button asChild>
+                  <a href={featuredProject.liveUrl} target="_blank" rel="noreferrer">
+                    <Globe className="h-4 w-4" /> Live App
+                  </a>
+                </Button>
+                <Button asChild variant="glass">
+                  <a href={featuredProject.apiUrl} target="_blank" rel="noreferrer">
+                    <Cpu className="h-4 w-4" /> API Health
+                  </a>
+                </Button>
+                <Button asChild variant="glass">
+                  <a href={featuredProject.repoUrl} target="_blank" rel="noreferrer">
+                    <Github className="h-4 w-4" /> Repository
+                  </a>
+                </Button>
+              </div>
+              <div className="mt-6 rounded-[8px] border border-accent/25 bg-accent/10 p-4">
+                <div className="flex items-center gap-3">
+                  <TrendingUp className="h-5 w-5 text-accent" />
+                  <p className="font-semibold text-accent">{featuredProject.traction}</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8 md:p-12">
+              <h3 className="font-display text-2xl font-semibold text-white">Operating Modes</h3>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                {featuredProject.modes.map((mode) => (
+                  <Card key={mode.name} className="p-6">
+                    <h4 className="font-display text-lg font-semibold text-primary">{mode.name}</h4>
+                    <p className="mt-3 leading-7 text-white/65">{mode.description}</p>
+                  </Card>
+                ))}
+              </div>
+
+              <h3 className="mt-10 font-display text-2xl font-semibold text-white">Engineering Stack</h3>
+              <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <Card className="p-6">
+                  <Code2 className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">Frontend</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.frontend.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.frontend.details}</p>
+                </Card>
+
+                <Card className="p-6">
+                  <ServerCog className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">Backend</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.backend.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.backend.details}</p>
+                </Card>
+
+                <Card className="p-6">
+                  <BrainCircuit className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">AI Engineering</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.ai.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.ai.details}</p>
+                </Card>
+
+                <Card className="p-6">
+                  <Cloud className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">Infrastructure</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.infrastructure.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.infrastructure.details}</p>
+                </Card>
+
+                <Card className="p-6">
+                  <Rocket className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">Deployment</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.deployment.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.deployment.details}</p>
+                </Card>
+
+                <Card className="p-6">
+                  <BarChart3 className="h-6 w-6 text-primary" />
+                  <h4 className="mt-4 font-display text-lg font-semibold text-white">Operations</h4>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {featuredProject.operations.stack.map((tech) => (
+                      <Badge key={tech} className="bg-white/[0.045] text-white/70">{tech}</Badge>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-sm leading-6 text-white/60">{featuredProject.operations.details}</p>
+                </Card>
+              </div>
+
+              <h3 className="mt-10 font-display text-2xl font-semibold text-white">Design Patterns & Architecture</h3>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                {featuredProject.patterns.map((pattern) => (
+                  <Card key={pattern} className="p-4">
+                    <div className="flex items-center gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                      <p className="text-sm font-medium text-white/80">{pattern}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+
+              <h3 className="mt-10 font-display text-2xl font-semibold text-white">Cost Engineering</h3>
+              <Card className="mt-6 p-6">
+                <p className="leading-7 text-white/70">{featuredProject.cost}</p>
+              </Card>
+            </div>
+          </Card>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 function Architecture() {
   return (
     <section id="architecture" className="relative overflow-hidden px-5 py-24 md:px-8">
@@ -532,13 +693,14 @@ export function PortfolioClient() {
         <About />
         <Skills />
         <Experience />
+        <FeaturedProject />
         <Projects />
         <Architecture />
         <Certifications />
         <Contact />
       </main>
       <footer className="border-t border-white/10 px-5 py-8 text-center text-sm text-white/45 md:px-8">
-        <p>Mayank Aggarwal • Backend & Agentic AI Engineer • Production GenAI Systems</p>
+        <p>Mayank Aggarwal • Senior Full-Stack AI Engineer • Production AI Platforms</p>
       </footer>
     </>
   );

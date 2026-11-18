@@ -1,15 +1,22 @@
 import {
+  BarChart3,
   Bot,
   BrainCircuit,
+  Clapperboard,
   Cloud,
   Code2,
+  Cpu,
   Database,
+  Film,
   GitBranch,
+  Globe,
   Layers3,
   Network,
+  Rocket,
   ServerCog,
   ShieldCheck,
   Sparkles,
+  TrendingUp,
   Workflow
 } from "lucide-react";
 
@@ -17,6 +24,7 @@ export const navItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Featured Project", href: "#featured-project" },
   { label: "Projects", href: "#projects" },
   { label: "Architecture", href: "#architecture" },
   { label: "Contact", href: "#contact" }
@@ -25,11 +33,16 @@ export const navItems = [
 export const stats = [
   "7+ Years Experience",
   "Production AI Systems",
-  "Multi-Agent Architectures",
-  "Enterprise Backend Engineering"
+  "Full-Stack AI Engineering",
+  "Multi-Agent Architectures"
 ];
 
 export const skillGroups = [
+  {
+    title: "Frontend Engineering",
+    icon: Code2,
+    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Query", "Zustand"]
+  },
   {
     title: "Generative AI",
     icon: BrainCircuit,
@@ -43,17 +56,17 @@ export const skillGroups = [
   {
     title: "Cloud & DevOps",
     icon: Cloud,
-    skills: ["Docker", "Kubernetes", "AWS", "Render", "CI/CD", "Microservices"]
+    skills: ["Docker", "Fly.io", "Vercel", "Redis", "Celery", "CI/CD"]
   },
   {
     title: "Databases",
     icon: Database,
-    skills: ["PostgreSQL", "SQL", "Vector Stores", "Semantic Search", "Data Modeling", "Caching"]
+    skills: ["PostgreSQL", "SQL", "Alembic", "Data Modeling", "Async ORM", "Relational Design"]
   },
   {
     title: "Distributed Systems",
     icon: Network,
-    skills: ["Scalable APIs", "Event Flows", "Service Boundaries", "Async Jobs", "Observability", "Reliability"]
+    skills: ["Async Task Queues", "Celery Workers", "Service Boundaries", "Observability", "Langfuse", "Grafana Loki"]
   },
   {
     title: "AI Orchestration",
@@ -90,6 +103,24 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    title: "AI Video Studio",
+    subtitle: "Prompt-to-Publish Short-Video Automation Platform",
+    description:
+      "Production AI platform that converts a single prompt into a fully produced short-form video. Handles research, scripting, storyboarding, AI footage generation, voiceover, subtitles, thumbnails, metadata, and final render. Videos generated on the platform have crossed 150K+ views on Facebook/Instagram Reels and continue to grow.",
+    liveUrl: "https://frontend-ten-pearl-78.vercel.app/login",
+    stack: ["Next.js", "FastAPI", "LangGraph", "Celery", "Fly.io", "Vercel", "PostgreSQL", "Redis"],
+    features: [
+      "Research mode: multi-agent LangGraph workflow for deep content research",
+      "Direct Cinematic mode: full creative control with direct prompt engineering",
+      "Multi-step pipeline: research → script → storyboard → assets → voice → subtitles → render",
+      "Provider abstraction: Kling v3 (fal.ai), Veo, stock media, Google TTS",
+      "Progress tracking: Celery task state with UI progress bars",
+      "YouTube publishing integration",
+      "150K+ video views on social platforms"
+    ],
+    icon: Clapperboard
+  },
   {
     title: "Agentic AI Blog Generation System",
     description:
@@ -134,6 +165,60 @@ export const projects = [
     icon: Code2
   }
 ];
+
+export const featuredProject = {
+  title: "AI Video Studio",
+  subtitle: "Prompt-to-Publish Short-Video Automation Platform",
+  liveUrl: "https://frontend-ten-pearl-78.vercel.app/login",
+  apiUrl: "https://ai-studio-api.fly.dev/health",
+  repoUrl: "https://github.com/Mayank-1997/try-faceless",
+  traction: "Videos generated on the platform have crossed 150K+ views on Facebook/Instagram Reels and continue to grow.",
+  description: "A production AI platform that converts a single prompt into a fully produced short-form video. The system orchestrates research, scripting, storyboarding, media generation, narration, subtitles, thumbnails, metadata, and final rendering with optional YouTube publishing.",
+  modes: [
+    {
+      name: "Research Mode",
+      description: "Multi-agent LangGraph workflow with 10+ specialized agents performing deep web research, fact-checking, and content planning before script generation."
+    },
+    {
+      name: "Direct Cinematic Mode",
+      description: "Bypasses research for direct creative control—users provide detailed prompts and the system focuses on asset generation, voice, and rendering."
+    }
+  ],
+  frontend: {
+    stack: ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS", "Turborepo Monorepo", "React Query", "Zustand"],
+    details: "Typed SDK layer with TypeScript contracts, React Query for server state, Zustand for authentication state, responsive UI with real-time progress tracking, deployed to Vercel."
+  },
+  backend: {
+    stack: ["FastAPI", "Python 3.12", "Pydantic v2", "SQLAlchemy", "Alembic", "PostgreSQL", "Redis"],
+    details: "Layered architecture with REST routers, JWT/API-key authentication middleware, repository pattern, async job orchestration, persistent workflow state, and Pydantic validation throughout."
+  },
+  ai: {
+    stack: ["LangGraph", "LangChain", "Gemini", "LLM Gateway", "Provider Registry"],
+    details: "Multi-agent workflows with router/planner/research/reducer patterns, LLM gateway for prompt/response tracking, provider abstraction for video generation (Kling v3 via fal.ai, Veo), prompt schemas, and model feature flags."
+  },
+  infrastructure: {
+    stack: ["Docker", "Fly.io", "Vercel", "Celery", "Redis", "Supervisord"],
+    details: "Docker-based deployment, FastAPI backend on Fly.io with health checks, Celery worker/beat under supervisord, Redis broker (Upstash TLS in production), persistent volume for generated media, deterministic startup sequence, and rollback via image redeploy."
+  },
+  deployment: {
+    stack: ["CI/CD", "Docker Compose", "Health Checks", "Migrations"],
+    details: "Automated migrations with Alembic, health check endpoints for orchestration, environment-based configuration, secrets excluded from source control, and container-based reproducibility."
+  },
+  operations: {
+    stack: ["Celery Tasks", "Retry Logic", "Langfuse", "Grafana Loki"],
+    details: "Retryable tasks with restart-safe checkpoints, idempotent job submission, duplicate paid-job prevention, per-second cost tracking, structured logging to Grafana Loki, and LLM trace observability via Langfuse (prompts, responses, tokens, costs, latency)."
+  },
+  patterns: [
+    "Layered backend architecture with repository pattern",
+    "Dependency injection via service container",
+    "Provider registry/strategy abstraction for AI services",
+    "Workflow orchestration with stateful checkpoints",
+    "Async task processing with Celery/Redis",
+    "Typed client/contract boundaries with TypeScript SDK",
+    "Feature flags for model/provider selection"
+  ],
+  cost: "Approximately $1.51 for a 12-second Kling v3 clip at $0.126/sec, with per-second cost tracking and duplicate-job prevention to avoid waste."
+};
 
 export const architectureFlows = [
   {
