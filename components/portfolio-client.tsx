@@ -172,26 +172,18 @@ function Hero() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="relative mx-auto w-full max-w-[30rem] lg:max-w-none">
+          <div className="relative mx-auto w-full max-w-[10rem] lg:max-w-none">
             <div className="absolute -inset-8 rounded-full bg-primary/20 blur-3xl" />
-            <Card className="relative overflow-hidden p-3">
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-              <div className="relative aspect-square overflow-hidden rounded-full border border-white/10 bg-black">
-                <Image
-                  src="/assets/MAYANK_PROFILE_PIC.png"
-                  alt="Futuristic AI avatar representation of Mayank Aggarwal"
-                  fill
-                  sizes="(max-width: 768px) 92vw, 42vw"
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-primary/20 bg-black/50 p-4 backdrop-blur-xl">
-                  <p className="font-display text-sm font-semibold text-primary">Full-Stack AI Mode</p>
-                  <p className="mt-1 text-xs text-white/65">Next.js • FastAPI • LangGraph • Production Infrastructure</p>
-                </div>
-              </div>
-            </Card>
+            <div className="relative aspect-square overflow-hidden rounded-full border border-white/10 bg-black">
+              <Image
+                src="/assets/MAYANK_PROFILE_PIC.png"
+                alt="Futuristic AI avatar representation of Mayank Aggarwal"
+                fill
+                sizes="(max-width: 768px) 92vw, 42vw"
+                className="object-cover object-top"
+                priority
+              />
+            </div>
           </div>
         </Reveal>
       </div>
