@@ -107,7 +107,7 @@ export const projects = [
     title: "AI Video Studio",
     subtitle: "Prompt-to-Publish Short-Video Automation Platform",
     description:
-      "Production AI platform that converts a single prompt into a fully produced short-form video. Handles research, scripting, storyboarding, AI footage generation, voiceover, subtitles, thumbnails, metadata, and final render. Videos generated on the platform have crossed 150K+ views on Facebook/Instagram Reels and continue to grow.",
+      "Production AI platform that converts a single prompt into a fully produced short-form video. Handles research, scripting, storyboarding, AI footage generation, voiceover, subtitles, thumbnails, metadata, and final render. Videos generated on the platform have crossed 150K+ views on Facebook Reels and continue to grow.",
     liveUrl: "https://frontend-ten-pearl-78.vercel.app/login",
     stack: ["Next.js", "FastAPI", "LangGraph", "Celery", "Fly.io", "Vercel", "PostgreSQL", "Redis"],
     features: [
@@ -172,7 +172,7 @@ export const featuredProject = {
   liveUrl: "https://frontend-ten-pearl-78.vercel.app/login",
   apiUrl: "https://ai-studio-api.fly.dev/health",
   repoUrl: "https://github.com/Mayank-1997/try-faceless",
-  traction: "Videos generated on the platform have crossed 150K+ views on Facebook/Instagram Reels and continue to grow.",
+  traction: "Videos generated on the platform have crossed 150K+ views on Facebook Reels and continue to grow.",
   description: "A production AI platform that converts a single prompt into a fully produced short-form video. The system orchestrates research, scripting, storyboarding, media generation, narration, subtitles, thumbnails, metadata, and final rendering with optional YouTube publishing.",
   modes: [
     {
