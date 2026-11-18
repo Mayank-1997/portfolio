@@ -176,7 +176,7 @@ function Hero() {
             <div className="absolute -inset-8 rounded-full bg-primary/20 blur-3xl" />
             <Card className="relative overflow-hidden p-3">
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-              <div className="relative aspect-square overflow-hidden rounded-[8px] border border-white/10 bg-black">
+              <div className="relative aspect-square overflow-hidden rounded-full border border-white/10 bg-black">
                 <Image
                   src="/assets/MAYANK_PROFILE_PIC.png"
                   alt="Futuristic AI avatar representation of Mayank Aggarwal"
@@ -186,7 +186,7 @@ function Hero() {
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                <div className="absolute inset-x-4 bottom-4 rounded-[8px] border border-primary/20 bg-black/50 p-4 backdrop-blur-xl">
+                <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-primary/20 bg-black/50 p-4 backdrop-blur-xl">
                   <p className="font-display text-sm font-semibold text-primary">Full-Stack AI Mode</p>
                   <p className="mt-1 text-xs text-white/65">Next.js • FastAPI • LangGraph • Production Infrastructure</p>
                 </div>
